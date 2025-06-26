@@ -1,4 +1,4 @@
-/* Reset default styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +20,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Header style */
+
 header {
   font-family: 'Poppins', Arial, sans-serif;
   background-color: #23272b;
@@ -54,7 +54,7 @@ header {
   flex: 1;
 }
 
-/* Search bar and menu */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -137,7 +137,6 @@ header {
   opacity: 1;
 }
 
-/* Container styles */
 .container-fluid {
   width: 100%;
   margin: 0;
@@ -151,7 +150,6 @@ header {
   padding: 20px;
 }
 
-/* About page styles */
 .about-container {
   width: 100%;
   max-width: 100%;
@@ -201,7 +199,6 @@ header {
   color: white;
 }
 
-/* Updates container */
 .updates-container {
   width: 100%;
   max-width: 1200px;
@@ -209,7 +206,6 @@ header {
   padding: 0 20px;
 }
 
-/* Team section */
 .team-section {
   width: 100%;
   max-width: 100%;
@@ -217,7 +213,6 @@ header {
   padding: 2rem;
 }
 
-/* Timeline wrapper */
 .timeline-wrapper {
   width: 100%;
   margin: 0;
@@ -246,7 +241,6 @@ header {
   background-color: #f8f8f8;
 }
 
-/* Timeline styles */
 .timeline-item {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
@@ -267,7 +261,6 @@ header {
   line-height: 1.6;
 }
 
-/* Team styles */
 .team-members {
   display: flex;
   flex-wrap: wrap;
@@ -297,7 +290,6 @@ header {
   line-height: 1.6;
 }
 
-/* Portal styles */
 .uucontainer {
   width: 100%;
   padding: 2rem;
@@ -310,7 +302,6 @@ header {
   margin: 1rem;
 }
 
-/* Footer styles */
 .mcontainer {
   display: flex;
   flex-wrap: wrap;
@@ -326,7 +317,6 @@ header {
   min-width: 250px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   #logoh {
     flex-direction: column;
@@ -389,7 +379,6 @@ header {
   }
 }
 
-/* Slideshow animation */
 @keyframes slideshow {
   0%, 20% {
     opacity: 1;
@@ -402,14 +391,12 @@ header {
   }
 }
 
-/* Media query for mobile responsiveness */
 @media (max-width: 768px) {
   .slideshow {
     height: 400px !important;
   }
 }
 
-/* Additional responsive utilities */
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -521,7 +508,6 @@ header {
   }
 }
 
-/* Timeline styles */
 .timeline-image-container {
   width: 100%;
   background-color: black;
@@ -550,7 +536,6 @@ header {
   }
 }
 
-/* Portal section styles */
 .portal-section {
   background-color: rgb(9, 3, 68);
 }
@@ -647,7 +632,6 @@ button:focus-visible {
   color: #fff !important;
 }
 
-/* Optionally, make sure ul/objectives/achievements lists are also white */
 .objectives-list li, .achievements-list li {
   color: #fff !important;
 }

@@ -69,8 +69,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
                 return message;
             }
         });
-        // NOTE: In this Spring version, registration.interceptors does not accept a lambda to remove interceptors.
-        // CSRF for messaging should be disabled via the security config bean override.
+        
     }
 
     @Override

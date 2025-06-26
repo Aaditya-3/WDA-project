@@ -6,7 +6,7 @@ const RecentUpdates = () => {
       <div className="updates-container">
         <h1 id="first_heading" className="text-center mb-5">Recent Updates</h1>
 
-        {/* Chandrayaan-3 Section */}
+        
         <div className="content-section bg-white rounded shadow-sm mb-4">
           <div className="row align-items-center">
             <div className="col-md-4">
@@ -38,7 +38,7 @@ const RecentUpdates = () => {
           </div>
         </div>
 
-        {/* Aditya-L1 Section */}
+        
         <div className="content-section bg-white rounded shadow-sm mb-4">
           <div className="row align-items-center">
             <div className="col-md-4">
@@ -69,7 +69,7 @@ const RecentUpdates = () => {
           </div>
         </div>
 
-        {/* Gaganyaan Section */}
+        
         <div className="content-section bg-white rounded shadow-sm mb-4">
           <div className="row align-items-center">
             <div className="col-md-4">
@@ -100,7 +100,7 @@ const RecentUpdates = () => {
           </div>
         </div>
 
-        {/* Earth Observation Satellites Section */}
+        
         <div className="content-section bg-white rounded shadow-sm mb-4">
           <div className="row align-items-center">
             <div className="col-md-4">
@@ -131,7 +131,7 @@ const RecentUpdates = () => {
           </div>
         </div>
 
-        {/* Commercial Launches Section */}
+        
         <div className="content-section bg-white rounded shadow-sm">
           <div className="row">
             <div className="col-12">

@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className="container-fluid p-0">
-      {/* Google Fonts */}
+      
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
       <footer className="footer-modern position-relative" style={{ fontFamily: 'Poppins, sans-serif' }}>
         <style>{`

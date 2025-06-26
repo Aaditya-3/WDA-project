@@ -26,7 +26,7 @@ import { Client } from '@stomp/stompjs';
 import SockJS from 'sockjs-client';
 import { useAuth } from '../contexts/AuthContext';
 
-// Update WebSocket URL to match your backend
+
 const SOCKET_URL = 'http://localhost:8081/ws';
 
 const ChatWindow = styled(Paper)(({ theme }) => ({
@@ -143,7 +143,7 @@ const LiveChat = () => {
       console.log('Connected to WebSocket');
       setIsConnected(true);
 
-      // Subscribe to public messages
+
       const publicSubscription = client.subscribe('/topic/public', (message) => {
         console.log('=== START PROCESSING RECEIVED MESSAGE ===');
         console.log('Raw message:', message);
@@ -157,7 +157,6 @@ const LiveChat = () => {
           }
 
           setMessages((prev) => {
-            // Prevent duplicate messages
             const isDuplicate = prev.some(
               (m) => 
                 m.timestamp === receivedMessage.timestamp && 
@@ -180,7 +179,6 @@ const LiveChat = () => {
         }
       });
 
-      // Subscribe to user status updates with enhanced logging
       const usersSubscription = client.subscribe('/topic/active-users', (message) => {
         console.log('=== START PROCESSING USERS UPDATE ===');
         console.log('Raw users update:', message);
@@ -198,7 +196,6 @@ const LiveChat = () => {
         }
       });
 
-      // Send join message (now as user connect)
       const connectMessage = {
         userId: user?.name || 'Guest',
       };
@@ -209,7 +206,7 @@ const LiveChat = () => {
         headers: { 'content-type': 'application/json' }
       });
 
-      // Store subscriptions for cleanup
+
       client.subscriptions = {
         public: publicSubscription,
         users: usersSubscription
@@ -241,7 +238,6 @@ const LiveChat = () => {
 
     return () => {
       if (client.connected) {
-        // Unsubscribe from all topics
         if (client.subscriptions) {
           Object.values(client.subscriptions).forEach(sub => sub.unsubscribe());
         }
@@ -273,7 +269,7 @@ const LiveChat = () => {
       });
       console.log('Message sent successfully');
       
-      // Clear input field
+
       setMessage('');
       console.log('=== END SENDING MESSAGE ===');
     } catch (error) {

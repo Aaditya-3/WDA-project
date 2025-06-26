@@ -32,14 +32,12 @@ public class ChatController {
                 chatMessage.setType(ChatMessage.MessageType.CHAT);
                 logger.info("Set message type to CHAT");
             }
-            
-            // Validate message
+         
             if (chatMessage.getSender() == null || chatMessage.getContent() == null) {
                 logger.error("Invalid message format: {}", chatMessage);
                 return;
             }
             
-            // Add server timestamp if not present
             if (chatMessage.getTimestamp() == null) {
                 chatMessage.setTimestamp(new java.text.SimpleDateFormat("h:mm:ss a")
                     .format(new java.util.Date()));
@@ -49,7 +47,6 @@ public class ChatController {
             logger.info("Attempting to broadcast message to /topic/public: {}", chatMessage);
             template.convertAndSend("/topic/public", chatMessage);
             
-            // Confirm successful broadcast
             logger.info("Successfully broadcast message. Type: {}, Sender: {}, Content length: {}", 
                 chatMessage.getType(), 
                 chatMessage.getSender(), 
@@ -68,15 +65,13 @@ public class ChatController {
         logger.info("User attempting to join: {}", username);
         
         try {
-            // Add username to web socket session
             headerAccessor.getSessionAttributes().put("username", username);
             logger.info("Added username to session attributes: {}", username);
             
-            // Add to online users if not already present
+  
             if (!onlineUsers.contains(username)) {
                 onlineUsers.add(username);
                 logger.info("Added user to online users. Current users: {}", onlineUsers);
-                // Broadcast online users list
                 broadcastOnlineUsers();
             }
             
@@ -102,7 +97,6 @@ public class ChatController {
         try {
             onlineUsers.remove(username);
             logger.info("Removed user from online users. Current users: {}", onlineUsers);
-            // Broadcast online users list
             broadcastOnlineUsers();
             
             if (chatMessage.getType() == null) {

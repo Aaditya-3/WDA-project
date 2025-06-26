@@ -21,7 +21,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/ws")
-                .setAllowedOrigins("http://localhost:5173") // Vite's default port
+                .setAllowedOrigins("http://localhost:5173") 
                 .withSockJS()
                 .setWebSocketEnabled(true)
                 .setHeartbeatTime(25000)
@@ -40,10 +40,10 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void configureWebSocketTransport(WebSocketTransportRegistration registration) {
-        registration.setMessageSizeLimit(128 * 1024) // Increase message size limit to 128KB
-                .setSendBufferSizeLimit(512 * 1024) // Increase buffer size to 512KB
-                .setSendTimeLimit(20000) // Time limit in milliseconds
-                .setTimeToFirstMessage(30000); // Time allowed to send first message
+        registration.setMessageSizeLimit(128 * 1024) 
+                .setSendBufferSizeLimit(512 * 1024) 
+                .setSendTimeLimit(20000) 
+                .setTimeToFirstMessage(30000); 
         logger.info("WebSocket transport configured with increased limits");
     }
 
