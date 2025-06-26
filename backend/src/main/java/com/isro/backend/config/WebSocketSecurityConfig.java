@@ -13,10 +13,6 @@ import org.springframework.messaging.MessageChannel;
 @Order(Ordered.HIGHEST_PRECEDENCE + 99)
 public class WebSocketSecurityConfig {
 
-    /**
-     * DEVELOPMENT ONLY: Permit all WebSocket messages, including connect, subscribe, and send.
-     * Remove or restrict this in production!
-     */
     @Bean
     public AuthorizationManager<Message<?>> messageAuthorizationManager() {
         MessageMatcherDelegatingAuthorizationManager.Builder messages = MessageMatcherDelegatingAuthorizationManager.builder();
@@ -24,7 +20,6 @@ public class WebSocketSecurityConfig {
         return messages.build();
     }
 
-    // CSRF for WebSocket messaging is disabled by not registering CsrfChannelInterceptor
     @Bean(name = "csrfChannelInterceptor")
     public Object csrfChannelInterceptor() {
         return null;

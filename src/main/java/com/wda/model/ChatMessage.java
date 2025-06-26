@@ -12,7 +12,6 @@ public class ChatMessage {
         LEAVE
     }
 
-    // Getters and Setters
     public String getContent() {
         return content;
     }

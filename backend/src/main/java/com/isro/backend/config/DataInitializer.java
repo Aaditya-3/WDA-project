@@ -13,7 +13,6 @@ public class DataInitializer {
     @Bean
     CommandLineRunner initDatabase(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         return args -> {
-            // Create admin user
             if (userRepository.findByEmail("admin@isro.com").isEmpty()) {
                 User adminUser = new User();
                 adminUser.setEmail("admin@isro.com");
@@ -24,7 +23,6 @@ public class DataInitializer {
                 System.out.println("Created admin user");
             }
 
-            // Create test users
             String[] testUsers = {"user1", "user2", "user3", "user4"};
             for (String user : testUsers) {
                 String email = user + "@isro.com";
@@ -39,7 +37,6 @@ public class DataInitializer {
                 }
             }
 
-            // Create moderator users
             String[] moderators = {"mod1", "mod2"};
             for (String mod : moderators) {
                 String email = mod + "@isro.com";

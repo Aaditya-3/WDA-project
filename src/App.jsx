@@ -14,12 +14,10 @@ import Signup from './components/Signup'
 import LiveChat from './components/LiveChat'
 import './App.css'
 
-// Create Home component that shows only About section
 const Home = () => {
   return <About />
 }
 
-// Protected Route wrapper component
 const ProtectedRoute = ({ children }) => {
   const { user } = useAuth();
   return user ? children : <Navigate to="/login" />;

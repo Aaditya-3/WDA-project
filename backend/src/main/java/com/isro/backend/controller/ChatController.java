@@ -24,8 +24,6 @@ public class ChatController {
     private final Map<String, String> activeUsers = new ConcurrentHashMap<>();
     
 
-    // @Autowired
-    // private UserService userService;
     
     
 
@@ -68,7 +66,7 @@ public class ChatController {
     @MessageMapping("/typing")
     @SendTo("/topic/typing")
     public TypingIndicator typing(@Payload TypingIndicator typingIndicator, SimpMessageHeaderAccessor headerAccessor) {
-        // Fix: Avoid NPE if getUser() is null
+
         String username = typingIndicator.getUsername();
         if (username == null || username.isEmpty()) {
             if (headerAccessor.getUser() != null) {

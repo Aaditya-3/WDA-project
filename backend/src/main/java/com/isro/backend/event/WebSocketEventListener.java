@@ -27,7 +27,6 @@ public class WebSocketEventListener {
         
         if (activeUsers.containsKey(sessionId)) {
             activeUsers.remove(sessionId);
-            // Notify others about user disconnection
             messagingTemplate.convertAndSend("/topic/active-users", 
                 new ArrayList<>(activeUsers.values()));
         }
