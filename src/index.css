@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  font-family: 'Poppins', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #23272b;
+  background-color: #f7f8fa;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f7f8fa;
+  color: #23272b;
+  font-size: 1rem;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #2a5298;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #ea6f17;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5em;
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p, li, span, label, input, textarea, select {
+  font-size: 1rem;
+  color: #23272b;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Poppins', inherit;
+  background-color: #2a5298;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+button:hover {
+  background-color: #ea6f17;
+  color: #fff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f7f8fa;
+    background-color: #23272b;
+  }
+  body {
+    background-color: #23272b;
+    color: #f7f8fa;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+  a {
+    color: #b3e5fc;
+  }
+  a:hover {
+    color: #FFD700;
+  }
+  button {
+    background-color: #2a5298;
+    color: #fff;
+  }
+  button:hover {
+    background-color: #FFD700;
+    color: #23272b;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
